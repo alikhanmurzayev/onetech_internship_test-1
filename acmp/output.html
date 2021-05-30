@@ -1,0 +1,339 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!-- Design & Programming by Sergey Belyaev, @2006-2021 E-mail: bsn@mail.ru -->
+
+<html>
+<head>
+  <title>1. A+B</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <meta name="viewport" content="width=640, initial-scale=1">
+  <meta name="description" content="You want to add two integers A and B. Input The only line of the input file INPUT.TXT recorded two positive integers, not exceeding 109. Output In the only line of the output file OUTPUT.TXT you should print a single integer — the sum of the numbers A and B. Sample #I">
+  <meta name="keywords" content="программирование, задачи по программированию, разбор задач, решение олимпиадных задач, проверяющая система, acm, асм">
+  <meta name='yandex-verification' content='4750e2c69b4e997c' />
+  <meta name='yandex-verification' content='5cb06d7dea348985' />
+  <meta name="google-site-verification" content="h6lljpq7I6H-uuuQLjC_oX_jLfDyQjsygVZup9Xyygs" />  
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon"> 
+  <link rel="apple-touch-icon" sizes="57x57" href="/images/57x57.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/72x72.png" />
+  <link rel="apple-touch-icon" sizes="114x114" href="/images/114x114.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/192x192.png" />
+  <link rel="icon" href="/images/120x120.svg" type="image/x-icon">
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(52428040, "init", {
+        id:52428040,
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+  </script>
+  <noscript><div><img src="https://mc.yandex.ru/watch/52428040" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+  <style>
+    a {color: rgb(0, 60, 0); text-decoration: none; border-color: 0;} 
+a:hover {color: red; text-decoration: underline;} 
+
+a.red {color: red; text-decoration: none; border-color: 0;} 
+a.red:hover {color: red; text-decoration: underline;} 
+
+a.top:link    {color: rgb(0, 0, 0);font-weight:bold;font-family:verdana;font-size:11pt;}
+a.top:visited {color: rgb(0, 0, 0);font-weight:bold;font-family:verdana;font-size:11pt;}
+a.top:hover   {color:#ee2222;font-weight:bold;font-family:verdana;font-size:11pt;}
+
+h1 {margin-top:5; margin-bottom:5; text-align:center; font-family: verdana, tahoma, arial; font-size: 14pt; color : #006600; font-weight: normal;} 
+h2 {font-family: verdana, tahoma, arial; font-size: 14pt; color : #006600; font-weight: normal;} 
+h3 {margin-top:10; margin-bottom:-20; font-family: verdana, tahoma, arial; font-size: 14pt; color : #006600; font-weight: normal;} 
+h4 {font-family: verdana, tahoma, arial; font-size: 11pt; color : #006600; font-weight: bold;} 
+
+hr {color: #509050; width: 100%; height: 1px}
+
+input { background-color: #f0fff0; border: gray 1px solid; font-family: verdana, tahoma; font-size: 8pt} 
+input.button {background-color: #eeeeee;border: gray 1px solid; font-family: verdana, tahoma; font-size: 8pt} 
+select {background-color: #f0fff0; border: gray 1px solid; font-family: verdana, tahoma; font-size: 8pt} 
+textarea {background-color: #f0fff0; border: gray 1px solid; font-family: verdana, tahoma; font-size: 8pt} 
+.menu_title {font-family: Tahoma;font-size: 12px;color: #0D2B01; FONT-WEIGHT: bold;}
+
+
+.news {color: #006600}
+.btext {text-align:center; font-family: verdana, tahoma, arial; font-size: 8pt; color : #004400; font-weight: bold;} 
+.btext2 {text-align: left; font-family: verdana, tahoma, arial; font-size: 8pt; color : #004400; font-weight: bold;} 
+.btext3 {font-family: verdana, tahoma, Arial; font-size: 8pt; color : #007000;}
+.menu { color: #33a033; font-size: 11pt; text-decoration: none; font-weight: bold;} 
+.title {color: rgb(0,120,0);font-weight:bold;}
+.nomargin {margin: 0 0 0 0}
+p.text {text-indent: 30px; text-align: justify; margin-top: 5px; margin-bottom: 10px;}
+p.stext {text-indent: 30px; font-size: 10pt;text-align: justify; margin-top: 5px; margin-bottom: 10px;}
+img.point {width: 5px; height: 12px; background-image: url(/images/1x1.gif);}
+.normal {background-color: #FFFFFF;border: 0 solid gray;font-size: 12px;font-family: Verdana, Tahoma;}
+.red {color: red;}
+.green {color: #008800;}
+.green2 {color: #008800;}
+.gray {background-color: #e8e8e8;}
+.lightgreen {background-color: #ccffcc;}
+.white {background-color: white;}
+.white2 {background-color: white; font-family: courier;}
+
+table.main {background-color: #007700; width: 100%;}
+th {background-color: #ddffdd; color: #006600; font-size: 12pt; text-decoration : none; font-weight : bold;}
+tr.small {font-size: 8pt;} 
+td.green {background-color: #9DBFB1}
+
+.img_topleft{
+	border : 0px;
+	background-image: url(/images/img_topleft.gif);
+	background-repeat: no-repeat;
+    width:13px;
+	height: 13px;
+}
+.img_top{
+	border : 0px;
+	background-image: url(/images/img_top.gif);
+	background-repeat: repeat-x;
+	height: 13px;
+}
+.img_topright{
+	border : 0px;
+	background-image: url(/images/img_topright.gif);
+	background-repeat: no-repeat;
+   width:13px;
+	height: 13px;
+}
+.img_left{
+	border : 0px;
+	background-image: url(/images/img_left.gif);
+	background-repeat: repeat-y;
+   width:13px;
+}
+.img_right{
+	border : 0px;
+	background-image: url(/images/img_right.gif);
+	background-repeat: repeat-y;
+   width:13px;
+}
+.img_bottomleft{
+	border : 0px;
+	background-image: url(/images/img_bottomleft.gif);
+	background-repeat: no-repeat;
+   width: 13px;
+	height: 13px;
+}
+.img_bottom{
+	border : 0px;
+	background-image: url(/images/img_bottom.gif);
+	background-repeat: repeat-x;
+	height: 13px;
+}
+.img_bottomright{
+	border : 0px;
+	background-image: url(/images/img_bottomright.gif);
+	background-repeat: no-repeat;
+   width:13px;
+	height: 13px;
+}
+.img_bottomright_comment{
+	border : 0px;
+	background-image: url(/images/img_comment.gif);
+	background-repeat: no-repeat;
+   width:13px;
+	height: 13px;
+}
+table.thumb {
+   border-collapse: collapse;
+	text-align:center;
+   margin: 10px;
+   padding: 0px;
+}
+
+a.my {color : #999999; font-size: 10; text-decoration:none}
+a.my:visited {color : #999999; font-size: 10; text-decoration: underline}
+a.my:hover {color : #666666; font-size: 10; text-decoration: underline}
+
+  </style>
+  <script>var now = new Date(2021,5-1,30,6,7,53)</script>
+
+<script>
+function ValidLF(){
+  if(!enter.lgn.value){
+    alert('Please fill login field')
+    enter.lgn.focus()
+  }else 
+  if(!enter.password.value){
+    alert('Please fill password field')
+    enter.password.focus()
+  }
+  else {return true}
+  return false
+}
+function ShowTime(){ 
+  now.setTime(now.getTime()+1000)
+  timer.innerHTML =now.toLocaleString()+"&nbsp;"
+  window.setTimeout('ShowTime()',1000)
+} 
+</script>
+
+</head>
+
+<body onload="ShowTime()" class=nomargin>
+  <table width=100% cellpadding=0 cellspacing=0 style="margin-top: 2" border=0> 
+	<tr height=20><td colspan=5>
+	  <table width=100% cellpadding=0 cellspacing=0 border=0> 
+
+        <tr height=40>
+	      <td colspan=2>
+		    <table cellpadding=0 cellspacing=0><tr>
+		      <td valign=top>
+
+<script type="text/javascript"><!--
+new Image().src = "//counter.yadro.ru/hit?r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random();//--></script>
+
+</td>
+		      <td><a href=/>
+			    
+ 			       <img src="/images/title2.png" width=354 height=40 alt="Programmer's school" title="Programmer's school" border=0></a>
+				
+			  </td>
+			  
+            </tr></table>
+		  </td>
+		  <td valign=top colspan=2 align=right>
+		     <p id=timer class=nomargin></p>
+			 
+			   <a href=/inc/remind.asp style="font-size: 8pt">Forgot password?</a>
+             
+		  </td>
+        </tr>
+
+        <tr height=5>
+		  <td background=/images/3lines.gif colspan=4></td>
+		</tr><tr height=20 valign=middle>
+           <td bgcolor=#aaFFaa width=430>
+<a href=/index.asp?main=tasks class=top>[problems]</a>
+
+  <a href=/index.asp?main=status class=top>[status]</a>
+
+<a href=/asp/do/index.asp class=top>[courses]</a>
+
+  <a href=/article.asp?id_text=40723 class=top>[info]</a>
+  
+  <a href=/inc/register.asp class=top>[register]</a>
+</td>
+           <td bgcolor=#609E48 width=20 background=/images/45a.gif></td>
+		   <td bgcolor=#609E48 align=center>
+		   
+		   </td>
+           <td bgcolor=#609E48 width=300 align=right> 
+  <form class=nomargin name=enter action=/index.asp?main=enter&r=160987504766163193117090 method=post onsubmit='return ValidLF()'> 
+    <nobr>
+    <b class=btext2>
+	  Login: <input type=text name=lgn value='qwertyasdfgh123' size=8 style="height:18">&nbsp;
+	  Password: <input type=password name=password value='' size=8 style="height:18">&nbsp;
+	  <input type=submit value=Ok class=button style="height:18">&nbsp;
+    </b>
+	</nobr>
+  </form>
+  <script defer>enter.lgn.focus()</script> 
+</td>
+		</tr>
+	  </table>
+    </td></tr>	
+	<tr height=8><td colspan=5 background=/images/line.gif></td></tr>
+	<tr><td colspan=6>
+    <table width=100% cellspacing=0 cellpadding=0><tr height=100%>
+	  
+	  <td valign=top> 	
+
+		<table height=100% width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr height=19>
+		    <td width=1></td>
+            <td width=12 background=/images/l_menu.gif bgcolor="#339933"></td>
+            <td background="/images/s_menu.gif" align=center bgcolor="#88ff88" class=menu_title
+			  			
+			>PROBLEM #1</td>
+            <td width=12 background=/images/r_menu.gif bgcolor="#339933"></td>
+		    <td width=1></td>
+          </tr>
+          <tr valign="top" height=100% bgcolor="#f0fff0">
+		    <td></td>
+            <td colspan="3" background=/images/notepad2.gif style="BORDER-BOTTOM: #306E18 1px dashed;  BORDER-left: #306E18 1px dashed;BORDER-right: #306E18 1px dashed; padding: 3px" height=100%>
+
+<h1>A+B</h1>
+<center><i>(Time limit: 1&nbsp;sec. Memory limit: 16 MB&nbsp;Difficulty: 2%)</i></center>
+<!–– google_ad_section_start ––>
+<p class=text>
+You want to add two integers A and B.
+</p>
+
+<h2>Input</h2>
+
+<p class=text>
+The only line of the input file INPUT.TXT recorded two positive integers, not exceeding 10<sup>9</sup>.
+</p>
+
+<h2>Output</h2>
+
+<p class=text>
+In the only line of the output file OUTPUT.TXT you should print a single integer — the sum of the numbers A and B.
+</p>
+
+<h2>Sample</h2>
+
+<table class=main cellpadding=2 cellspacing=1>
+<tr><th width=30>#</th><th>INPUT.TXT</th><th>OUTPUT.TXT</th></tr>
+<tr class=white2><td align=center>1</td><td valign=top>2 3</td><td valign=top>5</td></tr>
+</table>
+<!–– google_ad_section_end ––>
+<br>
+
+<h4><i>To submit solutions, <a href="/inc/register.asp">register</a> and login please.</i></h4>
+
+<h4>
+
+</h4>
+
+<center>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- acmp.ru, задача -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8694399840838901"
+     data-ad-slot="0005051684"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</center>
+</td><td></td></tr><tr height=2><td colspan=5></td></tr></table>	  </td>
+	</tr></table>
+	</td></tr>
+	<tr height=8><td colspan=5 background=/images/line.gif></td></tr>
+  </table>
+<center>
+<p style="margin:3">
+  <i>Krasnoyarsk regional Palace of pioneers, (c)2006 - 2021, E-mail: admin&#64;acmp&#46;ru</i>
+</p>
+<br>
+<font style="color: #999999; font-size: 10">
+<!–– google_ad_section_start(weight=ignore) ––>
+
+<!–– google_ad_section_end ––>		  
+</font>
+</center>
+
+<iframe src="/icq/icq_update.asp?noupdate=1" width=100 height=20 marginwidth=0 marginheight=0 frameborder=0 scrolling=no></iframe>
+
+</center>
+
+</body>
+</html>
+
